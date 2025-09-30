@@ -41,15 +41,14 @@ body {
 }
 
 .video-container {
-  margin: 20px auto;
-  width: 350px;   /* small fixed width */
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 video {
-  width: 100%;
-  display: block;
+  width: 80%;
+  max-width: 700px;
   border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
