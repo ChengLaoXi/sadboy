@@ -3,34 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu | Market Clearance System</title>
+  <title>Market Clearance System - Home</title>
   <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
   <nav class="navbar">
-    <h2 class="logo">Market Clearance System</h2>
+    <div class="logo">Market Clearance System</div>
     <ul class="nav-links">
       <li><a href="menu.html">Home</a></li>
-      <li><a href="#">Clearance</a></li>
-      <li><a href="#">Profile</a></li>
-      <li><a href="login.html">Logout</a></li>
+      <li><a href="application.html">Application</a></li>
+      <li><a href="renewal.html">Renewal</a></li>
+      <li><a href="about.html">About</a></li>
     </ul>
   </nav>
 
-  <!-- Home Section -->
   <section class="home">
-    <h1>Welcome to the Dashboard</h1>
-    <p>Here’s our featured video ad:</p>
+    <h1>Welcome to the Market Clearance System</h1>
+    <p>Manage your applications and renewals with ease.</p>
 
-<!-- Video Ad Section -->
-    <section class="video-ad">
-      <h3>Sponsored Ad</h3>
-      <video width="300" height="400" controls autoplay muted loop>
+    <div class="video-container">
+      <video controls autoplay muted loop>
         <source src="assets/videos/market_ad.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
   </section>
+
+  <script>
+    // Highlight active page in navbar
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll(".nav-links a");
+      const currentPage = window.location.pathname.split("/").pop();
+
+      links.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Clearance System | Application</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <header>
+    <h1>Market Clearance System</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="menu.html">Home</a></li>
+        <li><a href="application.html">Application</a></li>
+        <li><a href="renewal.html">Renewal</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Application Form</h2>
+    <p>Fill out the form below to apply for a market clearance.</p>
+
+    <form class="form-box">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="business">Business Name:</label>
+      <input type="text" id="business" name="business" required>
+
+      <label for="address">Business Address:</label>
+      <input type="text" id="address" name="address" required>
+
+      <label for="documents">Upload Required Documents:</label>
+      <input type="file" id="documents" name="documents" multiple>
+
+      <button type="submit" class="form-btn">Submit Application</button>
+    </form>
+  </main>
+
+  <!-- ✅ Script to auto-highlight current page -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll(".nav-links a");
+      const currentPage = window.location.pathname.split("/").pop();
+
+      links.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Clearance System | Renewal</title>
+  <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+  <header>
+    <h1>Market Clearance System</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="menu.html">Home</a></li>
+        <li><a href="application.html">Application</a></li>
+        <li><a href="renewal.html">Renewal</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Renewal Form</h2>
+    <p>Fill out the form below to renew your market clearance.</p>
+
+    <form class="form-box">
+      <label for="renew-name">Full Name:</label>
+      <input type="text" id="renew-name" name="renew-name" required>
+
+      <label for="renew-business">Business Name:</label>
+      <input type="text" id="renew-business" name="renew-business" required>
+
+      <label for="renew-id">Clearance ID:</label>
+      <input type="text" id="renew-id" name="renew-id" required>
+
+      <label for="renew-documents">Upload Renewal Documents:</label>
+      <input type="file" id="renew-documents" name="renew-documents" multiple>
+
+      <button type="submit" class="form-btn">Submit Renewal</button>
+    </form>
+  </main>
+
+  <script>
+    // Auto-highlight active nav link
+    document.addEventListener("DOMContentLoaded", () => {
+      const links = document.querySelectorAll(".nav-links a");
+      const currentPage = window.location.pathname.split("/").pop();
+
+      links.forEach(link => {
+        if (link.getAttribute("href") === currentPage) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
